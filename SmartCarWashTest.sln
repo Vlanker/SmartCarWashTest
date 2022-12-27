@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sqlite", "sqlite", "{46635D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityModels.Sqlite", "SmartCarWashTest.Common.EntityModels.Sqlite\SmartCarWashTest.Common.EntityModels.Sqlite.csproj", "{7F22ECC8-64FE-46F2-A493-74A86E32B785}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite", "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite\SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite.csproj", "{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{1CEB2DF5-5BFF-4A37-BF22-8EBA8907E453} = {1B7D9666-27DF-4FC6-820E-B3866A46B2CC}
 		{46635D03-7EC9-444B-A3CF-073D58243F9E} = {1CEB2DF5-5BFF-4A37-BF22-8EBA8907E453}
 		{7F22ECC8-64FE-46F2-A493-74A86E32B785} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
+		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
