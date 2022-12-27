@@ -6,9 +6,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{1CEB2D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sqlite", "sqlite", "{46635D03-7EC9-444B-A3CF-073D58243F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityModels.Sqlite", "SmartCarWashTest.Common.EntityModels.Sqlite\SmartCarWashTest.Common.EntityModels.Sqlite.csproj", "{7F22ECC8-64FE-46F2-A493-74A86E32B785}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.DataContext.Sqlite", "SmartCarWashTest.Common.DataContext.Sqlite\SmartCarWashTest.Common.DataContext.Sqlite.csproj", "{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite", "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite\SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite.csproj", "{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityModels.Sqlite", "SmartCarWashTest.Common.EntityModels.Sqlite\SmartCarWashTest.Common.EntityModels.Sqlite.csproj", "{55DEB1FF-33D7-4188-B4E1-B5FF883E7982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite", "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite\SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite.csproj", "{06641EC6-61ED-4B4A-AD12-65A74E5E66FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,17 +20,22 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1CEB2DF5-5BFF-4A37-BF22-8EBA8907E453} = {1B7D9666-27DF-4FC6-820E-B3866A46B2CC}
 		{46635D03-7EC9-444B-A3CF-073D58243F9E} = {1CEB2DF5-5BFF-4A37-BF22-8EBA8907E453}
-		{7F22ECC8-64FE-46F2-A493-74A86E32B785} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
-		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
+		{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
+		{55DEB1FF-33D7-4188-B4E1-B5FF883E7982} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
+		{06641EC6-61ED-4B4A-AD12-65A74E5E66FC} = {46635D03-7EC9-444B-A3CF-073D58243F9E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F22ECC8-64FE-46F2-A493-74A86E32B785}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74E79FB8-E53E-4EE0-BB09-8803CC727E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAA84BF-B702-40C4-A2BD-2AF893C41FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55DEB1FF-33D7-4188-B4E1-B5FF883E7982}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DEB1FF-33D7-4188-B4E1-B5FF883E7982}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DEB1FF-33D7-4188-B4E1-B5FF883E7982}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DEB1FF-33D7-4188-B4E1-B5FF883E7982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06641EC6-61ED-4B4A-AD12-65A74E5E66FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06641EC6-61ED-4B4A-AD12-65A74E5E66FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06641EC6-61ED-4B4A-AD12-65A74E5E66FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06641EC6-61ED-4B4A-AD12-65A74E5E66FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
