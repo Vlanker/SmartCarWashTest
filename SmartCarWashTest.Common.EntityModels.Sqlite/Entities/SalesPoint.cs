@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
     /// <summary>
@@ -5,6 +7,12 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
     /// </summary>
     public class SalesPoint
     {
+        public SalesPoint()
+        {
+            ProvidedProduct = new HashSet<ProvidedProduct>();
+            Sales = new HashSet<Sale>();
+        }
+
         /// <summary>
         /// Point of sale ID.
         /// </summary>
@@ -14,5 +22,9 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
         /// Name of the outlet.
         /// </summary>
         public string Name { get; set; }
+
+        // defines a navigation property for related rows.
+        public virtual ICollection<ProvidedProduct> ProvidedProduct { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; }
     }
 }

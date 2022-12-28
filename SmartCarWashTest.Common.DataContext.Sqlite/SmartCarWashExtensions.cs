@@ -12,7 +12,7 @@ namespace SmartCarWashTest.Common.DataContext.Sqlite
         /// <param name="services"></param>
         /// <param name="relativePath">Set to override the default of ".."</param>
         /// <returns>An IServiceCollection that can be used to add more services.</returns>
-        public static IServiceCollection AddNorthwindContext(
+        public static IServiceCollection AddSmartCarWashContext(
             this IServiceCollection services, string relativePath = "..")
         {
             var databasePath = Path.Combine(relativePath, "SmartCarWash.db");

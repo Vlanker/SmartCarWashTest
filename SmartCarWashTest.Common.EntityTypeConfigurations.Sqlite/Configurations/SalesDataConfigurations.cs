@@ -22,6 +22,9 @@ namespace SmartCarWashTest.Common.DataContext.EntityTypeConfigurations.Sqlite.Co
 
             builder.Property(salesData => salesData.ProductQuantity)
                 .IsRequired();
+            
+            builder.Property(salesData => salesData.SaleId)
+                .IsRequired();
         }
     }
 }

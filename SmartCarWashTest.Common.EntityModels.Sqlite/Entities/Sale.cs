@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
@@ -7,6 +8,11 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
     /// </summary>
     public class Sale
     {
+        public Sale()
+        {
+            SalesDataSet = new HashSet<SalesData>();
+        }
+
         /// <summary>
         /// Sale ID.
         /// </summary>
@@ -24,11 +30,13 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 
         /// <summary>
         /// Point of sale ID in Sale entity.
+        /// FKey
         /// </summary>
         public int SalesPointId { get; set; }
 
         /// <summary>
         /// Buyer ID in Sale entity.
+        /// FKey
         /// </summary>
         public int BuyerId { get; set; }
 
@@ -36,5 +44,10 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
         /// Total amount.
         /// </summary>
         public decimal TotalAmount { get; set; }
+
+        // defines a navigation property for related rows.
+        public virtual Buyer Buyer { get; set; }
+        public virtual SalesPoint SalesPoint { get; set; }
+        public virtual ICollection<SalesData> SalesDataSet { get; set; }
     }
 }

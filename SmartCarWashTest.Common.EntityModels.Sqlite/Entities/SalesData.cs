@@ -12,6 +12,7 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 
         /// <summary>
         /// Product ID in Sale data entity.
+        /// FKey
         /// </summary>
         public int ProductId { get; set; }
 
@@ -24,5 +25,15 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
         /// The total cost of the purchased quantity of goods of the given Product ID in Sale data entity.
         /// </summary>
         public int ProductIdAmount { get; set; }
+
+        /// <summary>
+        /// Sale ID in Sale data entity.
+        /// FKey
+        /// </summary>
+        public int SaleId { get; set; }
+
+        // defines a navigation property for related rows.
+        public virtual Product Product { get; set; }
+        public virtual Sale Sale { get; set; }
     }
 }

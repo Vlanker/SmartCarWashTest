@@ -20,6 +20,17 @@ namespace SmartCarWashTest.Common.DataContext.EntityTypeConfigurations.Sqlite.Co
             builder.Property(product => product.Price)
                 .HasConversion<double>()
                 .IsRequired();
+
+            builder.HasMany(product => product.ProvidedProducts)
+                .WithOne(providedProduct => providedProduct.Product)
+                .HasForeignKey(providedProduct => providedProduct.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+            
+            builder.HasMany(product => product.SalesDataSet)
+                .WithOne(salesData => salesData.Product)
+                .HasForeignKey(salesData => salesData.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

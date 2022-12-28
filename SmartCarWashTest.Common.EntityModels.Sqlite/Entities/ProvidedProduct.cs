@@ -12,12 +12,23 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 
         /// <summary>
         /// Product ID in entity of the provided product.
+        /// FKey
         /// </summary>
         public int ProductId { get; set; }
 
         /// <summary>
-        /// Product quantity in entity of the provided product
+        /// Product quantity in entity of the provided product.
         /// </summary>
         public int ProductQuantity { get; set; }
+
+        /// <summary>
+        /// Sales point ID in entity of the provided product.
+        /// FKey
+        /// </summary>
+        public int SalesPointId { get; set; }
+
+        // defines a navigation property for related rows.
+        public virtual Product Product { get; set; }
+        public virtual SalesPoint SalePoint { get; set; }
     }
 }
