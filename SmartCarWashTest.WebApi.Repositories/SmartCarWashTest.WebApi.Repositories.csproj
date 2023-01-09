@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SmartCarWashTest.Common.DataContext.Sqlite\SmartCarWashTest.Common.DataContext.Sqlite.csproj" />
+      <ProjectReference Include="..\SmartCarWashTest.WebApi.DTO\SmartCarWashTest.WebApi.DTO.csproj" />
+      
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    </ItemGroup>
+
+</Project>

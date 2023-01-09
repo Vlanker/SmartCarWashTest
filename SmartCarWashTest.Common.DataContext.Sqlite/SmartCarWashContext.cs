@@ -4,6 +4,8 @@ using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
 
 namespace SmartCarWashTest.Common.DataContext.Sqlite
 {
+#pragma warning disable CS1591
+
     public class SmartCarWashContext : DbContext
     {
         public virtual DbSet<Buyer> Buyers { get; set; }
@@ -28,7 +30,8 @@ namespace SmartCarWashTest.Common.DataContext.Sqlite
                 return;
             }
 
-            optionsBuilder.UseSqlite(ProjectConstants.DefaultConnection);
+            optionsBuilder.UseSqlite(ProjectConstants.DefaultConnection,
+                builder => builder.MigrationsAssembly(ProjectConstants.MigrationProject));
 
             optionsBuilder.UseLazyLoadingProxies();
         }
@@ -43,4 +46,6 @@ namespace SmartCarWashTest.Common.DataContext.Sqlite
             modelBuilder.ApplyConfiguration(new SalesPointConfigurations());
         }
     }
+
+#pragma warning restore CS1591
 }

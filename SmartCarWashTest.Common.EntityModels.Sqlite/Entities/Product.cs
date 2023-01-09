@@ -1,36 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
+using SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces;
 
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
     /// <summary>
     /// Product entity.
     /// </summary>
-    public class Product
+    /// <param name="Id">Product ID.</param>
+    /// <param name="Name">Product name.</param>
+    /// <param name="Price">Product price.</param>
+    public record Product(int Id, string Name, decimal Price) : IHaveIdentifier
     {
-        public Product()
-        {
-            ProvidedProducts = new HashSet<ProvidedProduct>();
-            SalesDataSet = new HashSet<SalesData>();
-        }
-
-        /// <summary>
-        /// Product ID.
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Product name.
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Product price.
-        /// </summary>
-        public decimal Price { get; set; }
-
         // defines a navigation property for related rows
-        public virtual ICollection<ProvidedProduct> ProvidedProducts { get; set; }
-        public virtual ICollection<SalesData> SalesDataSet { get; set; }
+        public virtual ICollection<ProvidedProduct> ProvidedProducts { get; set; } = new HashSet<ProvidedProduct>();
+        public virtual ICollection<SalesData> SalesDataSet { get; set; } = new HashSet<SalesData>();
     }
 }

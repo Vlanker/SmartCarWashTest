@@ -8,7 +8,7 @@ namespace SmartCarWashTest.Common.DataContext.EntityTypeConfigurations.Sqlite.Co
     {
         public void Configure(EntityTypeBuilder<Buyer> builder)
         {
-            builder.ToTable("Buyer", "public");
+            builder.ToTable("Buyer");
 
             builder.HasKey(buyer => buyer.Id);
 

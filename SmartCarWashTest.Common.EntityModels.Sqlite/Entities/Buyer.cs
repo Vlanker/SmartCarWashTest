@@ -1,28 +1,16 @@
 using System.Collections.Generic;
+using SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces;
 
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
     /// <summary>
     /// Buyer entity.
     /// </summary>
-    public class Buyer
+    /// <param name="Id">Buyer ID.</param>
+    /// <param name="Name">Buyer name.</param>
+    public record Buyer(int Id, string Name) : IHaveIdentifier
     {
-        public Buyer()
-        {
-            Sales = new HashSet<Sale>();
-        }
-
-        /// <summary>
-        /// Buyer ID.
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Buyer name.
-        /// </summary>
-        public string Name { get; set; }
-
         // defines a navigation property for related rows
-        public virtual ICollection<Sale> Sales { get; set; }
+        public virtual ICollection<Sale> Sales { get; set; } = new HashSet<Sale>();
     }
 }

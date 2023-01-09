@@ -1,34 +1,21 @@
+using SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces;
+
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
+    // /// <summary>
+    // /// Entity of the provided product.
+    // /// </summary>
     /// <summary>
     /// Entity of the provided product.
     /// </summary>
-    public class ProvidedProduct
+    /// <param name="Id">Provided product ID.</param>
+    /// <param name="ProductId">Product ID in entity of the provided product. FKey</param>
+    /// <param name="ProductQuantity">Product quantity in entity of the provided product.</param>
+    /// <param name="SalesPointId">Sales point ID in entity of the provided product.</param>
+    public record ProvidedProduct(int Id, int ProductId, int ProductQuantity, int SalesPointId) : IHaveIdentifier
     {
-        /// <summary>
-        /// Provided product ID.
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Product ID in entity of the provided product.
-        /// FKey
-        /// </summary>
-        public int ProductId { get; set; }
-
-        /// <summary>
-        /// Product quantity in entity of the provided product.
-        /// </summary>
-        public int ProductQuantity { get; set; }
-
-        /// <summary>
-        /// Sales point ID in entity of the provided product.
-        /// FKey
-        /// </summary>
-        public int SalesPointId { get; set; }
-
         // defines a navigation property for related rows.
-        public virtual Product Product { get; set; }
-        public virtual SalesPoint SalePoint { get; set; }
+        public virtual Product Product { get; set; } = null!;
+        public virtual SalesPoint SalePoint { get; set; } = null!;
     }
 }
