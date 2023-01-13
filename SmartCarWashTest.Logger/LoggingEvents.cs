@@ -1,26 +1,29 @@
-﻿namespace SmartCarWashTest.Logger
+﻿using Microsoft.Extensions.Logging;
+
+namespace SmartCarWashTest.Logger
 {
-    public abstract class LoggingEvents
+    public static class LoggingEvents
     {
-        public const int ListItems = 1001;
-        public const int GetItem = 1002;
-        public const int InsertItem = 1003;
-        public const int UpdateItem = 1004;
-        public const int DeleteItem = 1005;
-
-        public const int UpdateItemNotContent = 2044;
-        public const int DeleteItemNotContent = 2045;
-
-        public const int GetItemNotFound = 4001;
-        public const int UpdateItemNotFound = 4004;
-        public const int DeleteItemNotFound = 4005;
+        public static readonly EventId ListItems = new(1000, "Read List");
+        public static readonly EventId GetItem = new(1001, "Read");
+        public static readonly EventId InsertItem = new(1002, "Inserted");
+        public static readonly EventId UpdateItem = new(1003, "Updated");
+        public static readonly EventId DeleteItem = new(1004, "Deleted");
         
-        public const int InsertItemIsNullBadRequest = 40430;
-        public const int InsertItemNotAddedBadRequest = 40431;
+        public const int Details = 3000;
+        public const int Error = 3001;
 
-        public const int DeletedItemNotDeletedBadRequest = 4045;
-            
-        public const int UpdateItemIsNullOrDifferentIdBadRequest = 40440;
-        public const int UpdateItemNotUpdatedBadRequest = 40441;
+        public static readonly EventId UpdateItemNotContent = 2040;
+        public static readonly EventId DeleteItemNotContent = 2041;
+
+        public static readonly EventId GetItemNotFound = 4000;
+        public static readonly EventId UpdateItemNotFound = 4001;
+        public static readonly EventId DeleteItemNotFound = 4002;
+        
+        public static readonly EventId InsertItemIsNullBadRequest = 4040;
+        public static readonly EventId InsertItemNotAddedBadRequest = 4041;
+        public static readonly EventId DeletedItemNotDeletedBadRequest = 4042;
+        public static readonly EventId UpdateItemIsNullOrDifferentIdBadRequest = 4043;
+        public static readonly EventId UpdateItemNotUpdatedBadRequest = 4044;
     }
 }
