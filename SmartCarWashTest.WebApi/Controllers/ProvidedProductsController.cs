@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SmartCarWashTest.Logger;
-using SmartCarWashTest.WebApi.DTO.Models.ProvidedProduct;
+using SmartCarWashTest.WebApi.DTOs.Models.ProvidedProduct;
 using SmartCarWashTest.WebApi.Repositories.Interfaces;
 
 namespace SmartCarWashTest.WebApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProvidedProductsController : ControllerBase
     {
         private readonly ILogger<ProvidedProductsController> _logger;

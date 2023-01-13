@@ -1,8 +1,8 @@
 using System.Linq;
 using AutoMapper;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
-using SmartCarWashTest.WebApi.DTO.Models.ProvidedProduct;
-using SmartCarWashTest.WebApi.DTO.Models.SalesPoint;
+using SmartCarWashTest.WebApi.DTOs.Models.ProvidedProduct;
+using SmartCarWashTest.WebApi.DTOs.Models.SalesPoint;
 
 namespace SmartCarWashTest.WebApi.Repositories.AutoMapper.Profiles
 {

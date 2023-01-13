@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using SmartCarWashTest.Common.DataContext.Sqlite;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
 using SmartCarWashTest.WebApi.Controllers;
-using SmartCarWashTest.WebApi.DTO.Models.Buyer;
+using SmartCarWashTest.WebApi.DTOs.Models.Buyer;
 using SmartCarWashTest.WebApi.Repositories.AutoMapper.Profiles;
 using SmartCarWashTest.WebApi.Repositories.Repositories;
 using Xunit;

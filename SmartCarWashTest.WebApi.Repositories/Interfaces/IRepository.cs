@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using SmartCarWashTest.WebApi.DTO.Interfaces;
+using SmartCarWashTest.WebApi.DTOs.Interfaces;
 
 namespace SmartCarWashTest.WebApi.Repositories.Interfaces
 {

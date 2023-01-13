@@ -1,4 +1,4 @@
-using SmartCarWashTest.WebApi.DTO.Models.ProvidedProduct;
+using SmartCarWashTest.WebApi.DTOs.Models.ProvidedProduct;
 
 namespace SmartCarWashTest.WebApi.Repositories.Interfaces
 {

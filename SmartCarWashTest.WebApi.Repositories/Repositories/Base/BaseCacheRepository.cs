@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using SmartCarWashTest.Common.DataContext.Sqlite;
-using SmartCarWashTest.WebApi.DTO.Interfaces;
+using SmartCarWashTest.WebApi.DTOs.Interfaces;
 using SmartCarWashTest.WebApi.Repositories.Interfaces;
 
 namespace SmartCarWashTest.WebApi.Repositories.Repositories.Base

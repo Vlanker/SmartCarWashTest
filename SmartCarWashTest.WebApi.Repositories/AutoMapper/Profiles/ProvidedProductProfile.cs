@@ -1,6 +1,6 @@
 using AutoMapper;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
-using SmartCarWashTest.WebApi.DTO.Models.ProvidedProduct;
+using SmartCarWashTest.WebApi.DTOs.Models.ProvidedProduct;
 
 namespace SmartCarWashTest.WebApi.Repositories.AutoMapper.Profiles
 {

@@ -1,7 +1,7 @@
 using AutoMapper;
 using SmartCarWashTest.Common.DataContext.Sqlite;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
-using SmartCarWashTest.WebApi.DTO.Models.Product;
+using SmartCarWashTest.WebApi.DTOs.Models.Product;
 using SmartCarWashTest.WebApi.Repositories.Interfaces;
 using SmartCarWashTest.WebApi.Repositories.Repositories.Base;
 

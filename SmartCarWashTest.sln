@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.Common.Ent
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{9EF46BCE-BA8E-44AA-8073-B114F28BEABB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.WebApi.DTO", "SmartCarWashTest.WebApi.DTO\SmartCarWashTest.WebApi.DTO.csproj", "{AE179335-A0CC-4657-9641-DE40020E4513}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCarWashTest.WebApi.DTOs", "SmartCarWashTest.WebApi.DTOs\SmartCarWashTest.WebApi.DTOs.csproj", "{AE179335-A0CC-4657-9641-DE40020E4513}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webapi", "webapi", "{15DF4FE2-AB5B-4998-BA02-1952B2400175}"
 EndProject
