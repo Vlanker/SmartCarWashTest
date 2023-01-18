@@ -15,3 +15,17 @@ spec:
       containers:
         - name: webapi
           image: you_docker_hub_name/webapi:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-api-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: webapi
+  ports:
+    - name: webapi
+      protocol: TCP
+      port: 80
+      targetPort: 80
