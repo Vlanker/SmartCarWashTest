@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
-using SmartCarWashTest.WebApi.DTOs.Converters;
+using SmartCarWashTest.Common.Converters.JsonConverters;
 using SmartCarWashTest.WebApi.DTOs.Interfaces;
 using SmartCarWashTest.WebApi.DTOs.Models.SalesData;
-using TimeSpanConverter = SmartCarWashTest.WebApi.DTOs.Converters.TimeSpanConverter;
+using TimeSpanConverter = SmartCarWashTest.Common.Converters.JsonConverters.TimeSpanConverter;
 
 namespace SmartCarWashTest.WebApi.DTOs.Models.Sale
 {

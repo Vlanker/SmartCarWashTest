@@ -2,7 +2,7 @@ using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SmartCarWashTest.WebApi.DTOs.Converters
+namespace SmartCarWashTest.Common.Converters.JsonConverters
 {
     public class TimeSpanConverter : JsonConverter<TimeSpan>
     {

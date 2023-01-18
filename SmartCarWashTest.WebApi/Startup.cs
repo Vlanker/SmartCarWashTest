@@ -13,7 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SmartCarWashTest.Common.DataContext.Sqlite;
-using SmartCarWashTest.WebApi.DTOs.Converters;
+using SmartCarWashTest.Common.Converters.JsonConverters;
 using SmartCarWashTest.WebApi.Middlewares;
 using SmartCarWashTest.WebApi.Repositories;
 using SmartCarWashTest.WebApi.Swagger;

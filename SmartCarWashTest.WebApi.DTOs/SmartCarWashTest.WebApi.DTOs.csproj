@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\SmartCarWashTest.Common.DataContext.Sqlite\SmartCarWashTest.Common.DataContext.Sqlite.csproj" />
+      <ProjectReference Include="..\SmartCarWashTest.Common.Converters\SmartCarWashTest.Common.Converters.csproj" />
     </ItemGroup>
 
 </Project>

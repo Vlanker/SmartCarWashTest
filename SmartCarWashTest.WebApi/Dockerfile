@@ -6,6 +6,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["SmartCarWashTest.WebApi/SmartCarWashTest.WebApi.csproj", "SmartCarWashTest.WebApi/"]
+COPY ["SmartCarWashTest.Common.Converters.csproj", "SmartCarWashTest.Common.Converters/"]
 COPY ["SmartCarWashTest.Common.DataContext.Sqlite/SmartCarWashTest.Common.DataContext.Sqlite.csproj", "SmartCarWashTest.Common.DataContext.Sqlite/"]
 COPY ["SmartCarWashTest.Common.EntityModels.Sqlite/SmartCarWashTest.Common.EntityModels.Sqlite.csproj", "SmartCarWashTest.Common.EntityModels.Sqlite/"]
 COPY ["SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite/SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite.csproj", "SmartCarWashTest.Common.EntityTypeConfigurations.Sqlite/"]
