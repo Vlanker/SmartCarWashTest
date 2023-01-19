@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SmartCarWashTest.Logger;
@@ -9,6 +10,7 @@ using SmartCarWashTest.WebApi.Repositories.Interfaces;
 
 namespace SmartCarWashTest.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class BuyersController : ControllerBase
