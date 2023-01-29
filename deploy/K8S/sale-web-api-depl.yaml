@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-api-depl
+  name: sale-web-api-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapi
+      app: salewebapi
   template:
     metadata:
       labels:
-        app: webapi
+        app: salewebapi
     spec:
       containers:
-        - name: webapi
-          image: you_docker_hub_name/webapi:latest
+        - name: salewebapi
+          image: you_docker_hub_name/salewebapi:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: web-api-clusterip-srv
+  name: sale-web-api-clusterip-srv
 spec:
   type: ClusterIP
   selector:
-    app: webapi
+    app: salewebapi
   ports:
     - name: webapi
       protocol: TCP
