@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: crud-web-api-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: crudwebapi
+  template:
+    metadata:
+      labels:
+        app: crudwebapi
+    spec:
+      containers:
+        - name: crudwebapi
+          image: you_docker_hub_name/crudwebapi:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: crud-web-api-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: crudwebapi
+  ports:
+    - name: crudwebapi
+      protocol: TCP
+      port: 80
+      targetPort: 80
