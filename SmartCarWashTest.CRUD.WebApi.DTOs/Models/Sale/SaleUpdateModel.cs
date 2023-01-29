@@ -2,10 +2,10 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using SmartCarWashTest.Common.Converters.JsonConverters;
-using SmartCarWashTest.WebApi.DTOs.Interfaces;
+using SmartCarWashTest.CRUD.WebApi.DTOs.Abstractions;
 using TimeSpanConverter = SmartCarWashTest.Common.Converters.JsonConverters.TimeSpanConverter;
 
-namespace SmartCarWashTest.WebApi.DTOs.Models.Sale
+namespace SmartCarWashTest.CRUD.WebApi.DTOs.Models.Sale
 {
     /// <summary>
     /// Sale update model.
@@ -14,19 +14,25 @@ namespace SmartCarWashTest.WebApi.DTOs.Models.Sale
     /// <param name="SalesPointId">Point of sale ID in Sale model.</param>
     /// <param name="BuyerId">Buyer ID in Sale model.</param>
     /// <param name="TotalAmount">Total amount.</param>
-    public record SaleUpdateModel([Required] int Id, int SalesPointId, int BuyerId, [Required] decimal TotalAmount) : 
-        IUpdateModel
+    public record SaleUpdateModel([property: Required] int Id, int SalesPointId, int? BuyerId,
+        [property: Required] decimal TotalAmount) : IUpdateModel
     {
+        public SaleUpdateModel() : this(default, default, default, default)
+        {
+            Date = DateTime.MinValue.Date;
+            Time = TimeSpan.Zero;
+        }
+
         /// <summary>
         /// Date of sale.
         /// </summary>
-        [JsonConverter(typeof(DateTimeToDateConverter))]
-        public DateTime Date { get; set; }
+        [property: JsonConverter(typeof(DateTimeToDateConverter))]
+        public DateTime Date { get; init; }
 
         /// <summary>
         /// Time of sale.
         /// </summary>
-        [JsonConverter(typeof(TimeSpanConverter))]
-        public TimeSpan Time { get; set; }
+        [property: JsonConverter(typeof(TimeSpanConverter))]
+        public TimeSpan Time { get; init; }
     }
 }

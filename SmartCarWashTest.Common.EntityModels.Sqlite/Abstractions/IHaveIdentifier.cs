@@ -1,4 +1,4 @@
-namespace SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces
+namespace SmartCarWashTest.Common.EntityModels.Sqlite.Abstractions
 {
     public interface IHaveIdentifier
     {

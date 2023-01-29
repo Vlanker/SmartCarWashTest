@@ -1,4 +1,4 @@
-using SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces;
+using SmartCarWashTest.Common.EntityModels.Sqlite.Abstractions;
 
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
@@ -15,6 +15,10 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
     public record SalesData(int Id, int ProductId, int ProductQuantity, int ProductIdAmount, int SaleId) :
         IHaveIdentifier
     {
+        public SalesData() : this(default, default, default, default, default)
+        {
+        }
+
         // defines a navigation property for related rows.
         public virtual Product Product { get; set; } = null!;
         public virtual Sale Sale { get; set; } = null!;

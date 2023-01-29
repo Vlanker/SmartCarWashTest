@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using SmartCarWashTest.WebApi.DTOs.Interfaces;
+using SmartCarWashTest.CRUD.WebApi.DTOs.Abstractions;
 
-namespace SmartCarWashTest.WebApi.DTOs.Models.SalesData
+namespace SmartCarWashTest.CRUD.WebApi.DTOs.Models.SalesData
 {
     /// <summary>
     /// Sale data update model.
@@ -13,6 +13,11 @@ namespace SmartCarWashTest.WebApi.DTOs.Models.SalesData
     /// The total cost of the purchased quantity of goods of the given Product ID in Sale data model.
     /// </param>
     /// <param name="SaleId">Sale ID in Sale data model.</param>
-    public record SalesDataUpdateModel([Required] int Id, int ProductId, int ProductQuantity, int ProductIdAmount,
-        int SaleId) : IUpdateModel;
+    public record SalesDataUpdateModel([property: Required] int Id, int ProductId, int ProductQuantity,
+        int ProductIdAmount, int SaleId) : IUpdateModel
+    {
+        public SalesDataUpdateModel() : this(default, default, default, default, default)
+        {
+        }
+    }
 }

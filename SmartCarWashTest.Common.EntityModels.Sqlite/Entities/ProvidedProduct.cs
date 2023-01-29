@@ -1,4 +1,4 @@
-using SmartCarWashTest.Common.EntityModels.Sqlite.Interfaces;
+using SmartCarWashTest.Common.EntityModels.Sqlite.Abstractions;
 
 namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
 {
@@ -14,6 +14,10 @@ namespace SmartCarWashTest.Common.EntityModels.Sqlite.Entities
     /// <param name="SalesPointId">Sales point ID in entity of the provided product.</param>
     public record ProvidedProduct(int Id, int ProductId, int ProductQuantity, int SalesPointId) : IHaveIdentifier
     {
+        public ProvidedProduct() : this(default, default, default, default)
+        {
+        }
+
         // defines a navigation property for related rows.
         public virtual Product Product { get; set; } = null!;
         public virtual SalesPoint SalePoint { get; set; } = null!;
