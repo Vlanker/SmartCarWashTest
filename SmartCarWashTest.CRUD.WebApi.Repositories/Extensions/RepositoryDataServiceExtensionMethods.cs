@@ -1,13 +1,16 @@
 using Microsoft.Extensions.DependencyInjection;
-using SmartCarWashTest.WebApi.Repositories.Interfaces;
-using SmartCarWashTest.WebApi.Repositories.Repositories;
+using SmartCarWashTest.CRUD.WebApi.Repositories.Abstractions;
+using SmartCarWashTest.CRUD.WebApi.Repositories.Repositories;
 
-namespace SmartCarWashTest.WebApi.Repositories
+namespace SmartCarWashTest.CRUD.WebApi.Repositories.Extensions
 {
-    public static class DataServiceExtensions
+    /// <summary>
+    /// Repository DataService extension methods.
+    /// </summary>
+    public static class RepositoryDataServiceExtensionMethods
     {
         /// <summary>
-        /// Adds repositories scope.
+        /// Adds a scoped service of the repositories.
         /// </summary>
         /// <param name="services"></param>
         /// <returns>An IServiceCollection that can be used to add more services.</returns>
