@@ -6,9 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace SmartCarWashTest.WebApi.Swagger
+namespace SmartCarWashTest.Sale.WebApi.Infrastructure.Extensions
 {
-    public static class SwaggerGenExtensions
+    /// <summary>
+    /// SwaggerGen extension Methods.
+    /// </summary>
+    public static class SwaggerGenExtensionMethods
     {
         /// <summary>
         /// Add Map Types.
@@ -30,8 +33,12 @@ namespace SmartCarWashTest.WebApi.Swagger
         /// <returns></returns>
         public static SwaggerGenOptions AddSwaggerDoc(this SwaggerGenOptions options)
         {
-            options.SwaggerDoc("v1",
-                new OpenApiInfo { Title = "SmartCarWashTest.WebApi", Version = "v1" });
+            options.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "SmartCarWashTest - CRUD WebApi HTTP API",
+                Version = "v1",
+                Description = "The CRUD WebApi Service HTTP API"
+            });
 
             var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
@@ -48,7 +55,11 @@ namespace SmartCarWashTest.WebApi.Swagger
         {
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
-                Description = "JWT Authorization header using the bearer scheme",
+                Description = "JWT Authorization header using the bearer scheme." +
+                              "\r\n\r\n" +
+                              "Enter 'Bearer' [space] and then your token in the text input below." +
+                              "\r\n\r\n" +
+                              "Example: \"Bearer 12345abcdef\"",
                 Name = "Authorization",
                 In = ParameterLocation.Header,
                 Type = SecuritySchemeType.ApiKey
