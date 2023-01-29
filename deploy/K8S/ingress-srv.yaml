@@ -1,0 +1,61 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-srv
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  rules:
+    - host: <you_host_name>
+      http:
+        paths:
+          - path: /api/buyers
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/products
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/providedProducts
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/sales
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/salesData
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/salesPoints
+            pathType: Prefix
+            backend:
+              service:
+                name: crud-web-api-clusterip-srv
+                port:
+                  number: 80
+          - path: /api/s/sale
+            pathType: Prefix
+            backend:
+              service:
+                name: sale-web-api-clusterip-srv
+                port:
+                  number: 80
