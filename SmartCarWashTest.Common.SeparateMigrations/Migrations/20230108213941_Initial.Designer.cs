@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartCarWashTest.Common.DataContext.Sqlite;
+using SmartCarWashTest.Common.DataContext.Sqlite.Contexts;
 
 namespace SmartCarWashTest.Common.DataContext.Sqlite.Migrations
 {

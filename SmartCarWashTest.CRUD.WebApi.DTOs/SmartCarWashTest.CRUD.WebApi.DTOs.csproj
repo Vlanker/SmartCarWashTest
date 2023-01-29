@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SmartCarWashTest.Common.Converters\SmartCarWashTest.Common.Converters.csproj" />
+      <ProjectReference Include="..\SmartCarWashTest.EventBus\SmartCarWashTest.EventBus.csproj" />
+    </ItemGroup>
+
+</Project>
