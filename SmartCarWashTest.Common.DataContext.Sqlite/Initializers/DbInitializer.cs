@@ -1,8 +1,9 @@
 using System;
 using System.Linq;
+using SmartCarWashTest.Common.DataContext.Sqlite.Contexts;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
 
-namespace SmartCarWashTest.Common.DataContext.Sqlite
+namespace SmartCarWashTest.Common.DataContext.Sqlite.Initializers
 {
     public static class DbInitialize
     {

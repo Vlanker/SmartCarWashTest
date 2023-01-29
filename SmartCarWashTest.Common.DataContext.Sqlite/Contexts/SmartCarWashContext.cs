@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using SmartCarWashTest.Common.DataContext.EntityTypeConfigurations.Sqlite.Configurations;
+using SmartCarWashTest.Common.DataContext.Sqlite.Constants;
 using SmartCarWashTest.Common.EntityModels.Sqlite.Entities;
 
-namespace SmartCarWashTest.Common.DataContext.Sqlite
+namespace SmartCarWashTest.Common.DataContext.Sqlite.Contexts
 {
 #pragma warning disable CS1591
 
