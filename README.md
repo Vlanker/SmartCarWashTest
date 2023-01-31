@@ -1,8 +1,11 @@
 # SmartCarWashTest
 
 This is test for Smart car wash company.
+![Solution Architecture.png](images%2FSolution%20Architecture.png)
 
 ## SmartCarWashTest.CRUD.WebApi
+
+![CRUD Service Architecture.png](images%2FCRUD%20Service%20Architecture.png)
 
 1. Develop data models of the main entities:
 
@@ -186,6 +189,7 @@ ___
 
 ## SmartCarWashTest.Sale.WebApi
 
+![Sale Service Architecture.png](images%2FSale%20Service%20Architecture.png)
 Develop a web API with the implementation of the following business logic:
 **Sale** - the sale of a product or service. The goods can be purchased at any point of sale, subject to the
 availability of
@@ -308,6 +312,7 @@ kubectl apply -f crud-web-api-np-srv.yaml
 If needed edit `EventBusSettings`.
 
 ___
+![Kubernetes Architecture.png](images%2FKubernetes%20Architecture.png)
 
 ## Adding an API Getaway (Ingress Nginx)
 
